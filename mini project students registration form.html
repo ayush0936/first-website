@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Ayush Technologies - Students registration</title>        
+    </head>
+<body>
+
+    <h2>Ayush Technologies - Students Registration Form</h2>
+    <form>
+        <lable for="Fullname">Full Name:</lable><br>
+        <input type="fullname" id="fullname" name="fullname"placeholder="Enter your Full Name"><br>
+
+        <lable for="email">Email Address:</lable><br>
+        <input type="email" id="email" name="email" placeholder="Enter your email"><br
+                                                                                                    
+        <lable for="mobile">Mobile Number:</lable><br>
+        <input type="tel" pattern="\91+-[0-5]{10} " id="mobile"  name="mobile" placeholder="Enter Mobile Number" required><br
+
+
+        <label>Gender</label><br>
+        <input type="ratio" id="male" name="gender" value="male"><br>
+        <label for="male">Male:</label><br>
+
+        <input type="ratio" id="female" name="gender" value="female"><br>
+        <label for="female">Female:</label><br>
+        
+        <input type="ratio" id="other" name="gender" value="other"><br>
+        <label for="other">Other:</label><br>
+
+        <label for="course">Selected Course:</label><br>
+        <select id="Course" name="course" required>
+            <option value="">--Plese choose an option--</option>
+            <option value="java full stack"> Java Full Stack</option>
+            <option value="frontend">Frontend development</option>
+            <option value="react with project">React with project</option>
+            <option value="BCA">BCA</option>
+
+        </select><br><br>
+         <lable for="timing">Preferred Batch Timing:</lable><br>
+        <input type="text" id="timing"  name="timing" placeholder="e.g.,Weekend Monday / evening "
+
+         <lable for="comments">Any Comments or Questions:</lable><br>
+        <textarea id="comments" name="comments" row="4" cols="50" placeholder="Write here....."></textarea>
+
+        
+
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear form">
+
+        <p>&copy; 2026 Atysh tech limited
+
+        </p>
+
+    </form>
+</body>
+</html>
