@@ -1,0 +1,8 @@
+/* ~ - general sibling selector example*/
+h2 ~ p {
+    color: red;
+}
+
+h2 {
+    color: blue;
+}

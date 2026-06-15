@@ -1,0 +1,29 @@
+/*======================================
+:link example (unvisited)ur1(
+==================================================*/
+a:link {
+    color:#0d47a1;
+    text-decoration: underline;
+    background-color: #e3f2fd;
+    font-weight: bold;
+    border-bottom:2px solid #64b5f6;
+    transition: color 0.3s;
+}
+
+/*====================================
+:visited example (visited)
+=======================================*/
+a:visited {
+    color:#ede7f6;
+    background-color: aquamarine;
+    text-decoration:line-through;
+    border-bottom: 2px dotted #ede7f6;
+}
+/*=======================================
+just for fun
+==========================================*/
+a:hover {
+    color:#64b5f6;
+    background-color: azure;
+    text-decoration:none;
+}

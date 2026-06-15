@@ -1,0 +1,32 @@
+/* syle for the parent element*/
+.parent {
+
+    background-color: lightblue;
+    padding: 20px;
+}
+
+/*style for the descendant element*/
+.parent p {
+    color:darkblue;
+    font-size:40px;
+} 
+
+/*style for the descendant element*/
+.parent div {
+    background-color: lightgreen;
+    font-size: 12px;
+}
+
+
+.parent div p{
+    background-color: rgb(238,216,144);
+    font-size: 40px;
+}
+
+li {
+    color:rgb(238,3,3);
+    font-size: 20px;
+}
+
+
+

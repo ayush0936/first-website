@@ -1,0 +1,12 @@
+h1,h2,p {
+    color:red;
+}
+
+h2,span {
+    font-size:80px;
+}
+
+/* it will override the previous rule*/
+h2,p {
+    color:blue;
+}

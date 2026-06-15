@@ -1,0 +1,113 @@
+/* =================================================================================
+  :hover examples
+  =======================================================================*/
+
+  .hover-btn:hover {
+    background-color: #ffe082;
+    color:#6d0808;
+    border: 2px solid #fbc02d;
+  }
+  .hover-text:hover {
+    background-color: #d1f7c4;
+    font-weight:bold;
+    font-size: 1.5em;
+  }
+  .hover-card:hover {
+    padding: 16px;
+    margin-top:12px;
+    background: #f0f0f0;
+    border-radius: 8px;
+  }
+  .hover-card:hover {
+    box-shadow: 0 0 16px 2px #2e7d32;
+    background: #e8f5e9;
+  }
+  /* ====================================================================
+  :active examples
+  ========================================================================*/
+  .active-btn:active {
+    background-color: #c62828;
+    color: #fff;
+    border: 2px solid #b71c1c;
+  }
+  .active-link:active {
+    color:#fff;
+    background:#1976d2;
+    padding:2px 6px;
+    border-radius: 3px;
+  }
+  .active-card:active {
+    background: #ffccbc;
+    border: 2px solid #ff5722;
+  }
+
+  /*===============================================================
+   :focus, :focus-visible, :focus-within examples
+   ================================================================*/
+
+   .focus-input:focus {
+   outline: 3px solid #1976d2;
+   background: #e3f2fd;
+}
+.focus-btn:focus {
+    background: #c5e1a5;
+    border: 2px solid #33691e;
+    color: #2e7d32;
+}
+
+.focus-visible-input:focus-visible {
+    border: 3px dashed #ef6c00;
+    background: #fff3e0;
+}
+
+.focus-within-box {
+    border:2px solid #888;
+    padding:16px;
+    margin-top:12px;
+    border-radius:8px;
+}
+
+.focus-within-box:focus-within {
+    border-color:#0288d1;
+    background: #e1f5fe;
+}
+/*===============================================================================
+ :enabled & :disabled examples
+ ================================================================================*/
+ .enabled-inpu:enabled {
+    border:2px solid #43a047;
+    background: #f1f8e9;
+ }
+ .disabled-input:disabled {
+    border:2px dashed #bdbdbd;
+    background: #1b5e20;
+
+ }
+ .enabled-btn:enabled {
+    background: #a5d6a7;
+    color:#1b5e20;
+ }
+ .disabled-btn:disabled {
+    background: #43a047;
+    color:#888;
+ }
+
+ /*======================================================================================
+ :checked & :indeterminate examples
+ =========================================================================================*/
+
+ .checked-checkbox:checked + label,
+ .checked-radio:checked + label {
+    color:#2e7d32;
+    font-weight: bold;
+ }
+
+ input[type="checkbox"]:checked {
+    outline:2px solid #ef6c00;
+    box-shadow: 3px 3px 5px 2px #1d0e72;
+ }
+
+ input[type="radio"]:checked {
+    outline:2px solid #43a047;
+    box-shadow: 0 0 6px 2px #90caf9;
+ }

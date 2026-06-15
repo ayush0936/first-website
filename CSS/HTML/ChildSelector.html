@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>child selector example</title>
+    <link rel="stylesheet" href="../CascadingStyleSheets/ChildSelectors.css">
+    </head>
+    <body>
+        <div class="parent">
+            <h1>This is the parent element</h1>
+
+
+            <!--direct child paragraph-->
+            <p>this is a paragraph inside the parent element.</p>
+
+            <!--nested div-->
+            <div>
+            <p>this peragraph is nestrd insde s div.</p>
+            the style for .parent > p will not apply.</p>
+            <span>thids is inside div</span>
+            </div>
+             
+            <!--DIRECT CHILD ELEMENT WITH-ID-->
+            <section id="announcement">
+                <h2>Important Announcement</h2>
+            </section>
+
+            <!--direct child element with a nested ul-->
+            <div class="menu">
+                <ul>
+                    <li>Home</li>
+                    <li>Course</li>
+                </ul>
+            </div>
+            <div> <ul>
+                <li>HTML</li>
+                <LI>JAVASCRIPT</LI>
+                <LI>CSS</LI>
+                <LI id="itemjquery">jQuery</LI>
+                <li>Bootstrap</li>
+                <li>angular</li>
+                <li>Vue</li>
+                <li>bootstrap</li>
+                <li>tailwind</li>
+            </ul>
+        </div>
+        </div>
+    </body>
+</html>

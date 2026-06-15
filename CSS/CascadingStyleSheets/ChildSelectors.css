@@ -1,0 +1,41 @@
+/*element-based child selector*/
+.parent > p {
+    color : blue;
+    font-style: italic;
+}
+
+/*id-based child selector*/
+.parent > #announcement {
+    background-color: #999036;
+}
+
+/*element-based child selector - section directly under .*/
+.parent > section {
+    background-color: aqua;
+    font-size: 23px;
+}
+
+/*element does not apply to ul inside .menu div */
+.parent > ul {
+    color:red;
+    list-style-type:square;
+}
+
+/*element-based child selector inside .menu - width-height*/
+.menu > ul {
+    list-style-type: circle;
+}
+div > span {
+color:green;
+font-weight: bold;    
+}
+
+div > ul > li {
+    color: red;
+    font-weight: bold;
+}
+
+div > ul > #itemjquery{
+    color: blue;
+    font-weight: bold;
+}

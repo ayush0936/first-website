@@ -1,0 +1,78 @@
+/* SELECTOR EXAMPLE */
+/*universal selector */
+
+*{
+    color: blue;
+    font-size:40px;
+}
+*/
+
+body {
+color: green;
+font-size: 70px;
+}
+
+/*element selector */
+
+
+p{
+    color:rgb(196, 27, 182);
+    background-color:rgb(255, 255, 0);
+}
+
+div{
+    color:green;
+}
+span{
+    color:rgb(38, 0, 255);
+}
+
+/* class selector */
+.red {
+    color:red;
+}
+
+.ayush {
+    color:rgb(0, 4, 255);
+    background-color:salmon;
+}
+
+.asshu {
+    color:rgb(0, 255, 0);
+    background-color:darkcyan;
+}
+
+/* id selector */
+
+#selector2 {
+background-color:rgb(39, 122, 145);
+
+}
+
+/*child selector*/
+
+.parent > p {
+    color:rgb(7, 7, 7);
+    background-color:rgb(167,52,52);
+}
+    #firstparagraph {
+    color:rgb(255,255,255);
+    backgroung-color: rgb(0,0,0);
+}
+    .myspanstyle {
+    color:rgb(235,255,255);
+    background-color:rgb(122,18,18);
+}
+    .whatiscss {
+    color:rgb(182,177,177);
+    background-color:rgb(102,28,28);
+}
+    .foregroundcolor{
+    color:rgb(10,131,36);
+}
+    .mybackgroundcolor {
+        background-color:rgb(19,53,53);
+    }
+    */
+    /* create at least 3 website */
+
