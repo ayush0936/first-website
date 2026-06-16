@@ -1,0 +1,149 @@
+/* ====================================================================
+:first-child & :last-child examples (these only apply) 
+=====================================================================*/
+ul.demo-firstlast li:first-child {
+    background: #ffe082;
+    color: #3e2723;
+    font-weight: bold;
+    border-left: 4px solid #fbc02d;
+}
+ul.demo-firstlast li:last-child {
+    background: #c5e1a5;
+    color: #1b5e20;
+    font-weight: bold;
+    border-right: 4px solid greenyellow;
+}
+div.demo-firstlast p:first-child {
+    background: #b3e5fc;
+    color: #01579b;
+    font-weight: bold;
+    border-left: 4px solid #0288d1;
+}
+div.demo-firstlast p:last-child {
+    background: #f3e5f5;
+    color: #6a1b9a;
+    font-weight: bold;
+    border-right: 4px solid purple;
+}
+ol.demo-firstlast li:first-child {
+    background: #6a1b9a;
+    color: #fbc02d;
+    font-weight: bold;
+    border-left: 4px solid #6a1b9a;
+}
+ol.demo-firstlast li:last-child {
+    background: #1b5e20;
+    color: #fbc02d;
+    font-weight: bold;
+    border-right: 4px solid burlywood;
+}
+/*======================================================================
+:only-child & :onlu-of-type example (use with single)
+====================================================================*/
+div.demo-only >p:only-child {
+    background: #c5e1a5;
+    color: #6a1b9a;
+    font-weight: bold;
+    border:2px solid #0288d1;
+}
+div.demo-only > span:only-of-type {
+    background: #b2ebf2;
+    color: #6a1b9a;
+    font-weight: bold;
+    border: 2px dashed #ffe082;
+}
+ul.demo-only li:only-child {
+    background: #1b5e20;
+    color: #fbc02d;
+    font-weight: bolder;
+    border:2px solid #ff8682;
+}
+div.demo-only2 > em:only-of-type {
+    background:#f3e5f5;
+    color: red;
+    font-weight: bold;
+    border: 2px dashed #ff8682;
+}
+/*======================================================
+:nth-child(n) & :nth-last-child(N) example (add at leas)
+=========================================================*/
+ul.demo-nth li:nth-child(3) {
+    background: #0288d1;
+    color: #b3e5fc;
+    border: 2px solid #fbc02d;
+}
+ul.demo-nth li:nth-last-child(2) {
+    background: #c5e1a5;
+    color: #fbc02d;
+    border: 2px dashed #1b5e20;
+
+}
+ul.demo-nth li:nth-child(even) {
+    font-style: italic;
+    background: #c5e1a5;
+    color:#fbc02d;
+}
+div.demo-nth p:nth-child(4) {
+    background: #b3e5fc;
+    color: #1b5e20;
+    border: 2px solid #fbc02d;
+}
+ol.demo-nth li:nth-child(2) {
+    background: #c5e1a5;
+    color: #1b5e20;
+    border: 2px solid #3e2723;
+}
+ol.demo-nth li:nth-last-child(3) {
+    background: #b2ebf2;
+    color: red;
+    border: 2px dashed blue;
+}
+/*====================================================================
+:first-of-type, :last-of-type, :nth-of-type(n), :nth-last-of-type(n)
+======================================================================*/
+div.demo-type > p:first-of-type {
+    background: #b2ebf2;
+    color: #1b5e20;
+    border-bottom: 2px solid green;
+}
+div.demo-type > p:last-of-type {
+    background: #c5e1a5;
+    color: orange;
+    border-top: 2px solid orangered;
+}
+div.demo-type > span:first-of-type {
+    background: burlywood;
+    color: #0288d1;
+    border-bottom: 2px dashed #2dfb60;
+}
+div.demo-type > span:last-of-type {
+    background: #6a1b9a;
+    color: #2dfb60;
+    border-top: 2px solid red;
+}
+div.demo-type >em:nth-of-type(2) {
+    background: #ff8682;
+    color: #6a1b9a;
+    border: 2px dashed #3e2723;
+}
+div.demo-type >p:nth-last-of-type(2) {
+    background: #f3e5f5;
+    color: #1b5e20;
+    border: 2px dashed #3e2723;
+}
+/*=====================================================
+:empty
+===================================================*/
+.empty-example:empty,
+div.demo-empty > span:empty,
+div.demo-empty > p:empty {
+          background: red;
+          min-height: 32px;
+          min-width: 80px;
+          display:inline-block;
+          border: 2px dotted ;
+          text-align: center;
+          vertical-align: middle;
+          line-height: 32px;
+          font-style: italic;
+}

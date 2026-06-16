@@ -7,16 +7,18 @@ input[type="text"] {
   padding: 10px;
   margin: 5px;
   width: 200px;
+  background-color:#0005;
+  color:blue
 }
 
 button {
   padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
+  background-color: goldenrod;
+  color: red;
   border: none;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: yellowgreen;
 }
