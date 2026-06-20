@@ -1,0 +1,62 @@
+/*===========================================================================
+:valid & :invalid (email and pattern inputs)
+=============================================================================*/
+.valid-invalid-demo:valid{
+    border: 2px solid green;
+    background: #e8f5e9;
+    color: green;
+}
+.valid-invalid-demo:invalid{
+border: 2px solid red;
+background: #ffebee;
+color: red;
+}
+.valid-invalid-pattern:valid {
+    border:2px solid #1565c0;
+    background: #e3f2fd;
+    color: #1565c0;
+}
+.valid-invalid-pattern:invalid {
+    border: 2px solid #ad1457;
+    background: #fce4ec;
+    color: #ad1457;
+}
+
+/*==========================================================================================
+:required & :optional 
+============================================================================================*/
+.required-demo:required {
+    border: 2px solid orange;
+    background: #e8f5e9;
+}
+.required-demo:optional {
+    border: 2px dashed #90caf9;
+    background: #e3f2fd;
+}
+
+
+/*===================================================================================
+:in-range & :out-of-range
+======================================================================================*/
+.range-demo:in-range {
+    border: 2px solid green;
+    background: #fce4ec;
+}
+.range-demo:out-of-range {
+    border: red;
+    background: #e8f5e9;
+}
+.range-demo2:in-range {
+    outline: 2px solid green;
+}
+/*========================================================================================
+:default (default submit button or checked radio)
+=============================================================================================*/
+.default-demo:default {
+    border: 2px solid orange;
+    background: #e3f2fd;
+    color: orangered;
+}
+.default-radio:default {
+    outline: 2px solid green;
+}

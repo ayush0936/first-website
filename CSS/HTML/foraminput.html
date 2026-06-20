@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css form validation pseudo-classes  Demo</title>
+    <link rel="stylesheet" href="../CascadingStyleSheets/forminput.css">
+</head>
+<body>
+    <h1>Form Validation & Input State Pseudo-Classes Demo</h1>
+
+    <!-- ======== :valid and :invalid ======= -->
+     <section>
+        <h2>:valid & :invalid</h2>
+        <form>
+            <label>email(must be only):
+            <input type="email" class="valid-invalid-demo" required placeholder="abd@example.com">
+            </label>
+        <br>
+        <label>pattern (digits only):
+            <input type="text" class="valid-invalid-pattern" pattern="\d+"required placeholder="numbers only">
+        </label>
+        </form>
+     </section>
+
+     <!-- =========== :required & :optional============-->
+      <section>
+        <h2>:required & :optional</h2>
+        <form>
+            <label>name (required)
+            <input type="text" class="required-demo" required>
+            </label>
+            <br>
+            <label>comment(optional):
+                <input type="text" class="optional-demo">
+            </label>
+        </form>
+      </section>
+      <hr>
+
+      <!-- =============== :in-range & :out-of-range ==============-->
+       <section>
+        <h2>:in-range & :out-of-range</h2>
+        <form>
+            <label>age (18-30):
+                <input type="number" class="range-demo" min="10" max="30" value="15">
+             </label>
+             <br>
+             <label>score(0-100):
+                <input type="range" class="range-demo2" min="0" max="100" value="50">
+             </label>
+        </form>
+       </section>
+       <hr>
+       
+
+       <!--======================= :defaul ==============-->
+       <section>
+        <h2>:default</h2>
+        <form>
+            <button type="submit" class="default-demo">submit (default)</button>
+            <button type="button" class="default-demo">secondary</button>
+        </form>
+        <form>
+            <input type="radio" name="color" class="default-radio" checked>red
+            <input type="radio" name="color" class="default-radio">blue
+        </form>
+       </section>
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage Demo</title>
+    <link rel="stylesheet" href="../LocalStorage/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>LocalStorage Demo</h1>
+        <div class="form-group">
+            <label for="favoriteColor">Enter your favorite color:</label>
+            <input type="text" id="favoriteColor" placeholder="e.g., blue">
+            <button id="saveButton">Save</button>
+        </div>
+        <div class="form-group">
+            <button id="retrieveButton">Retrieve Favorite Color</button>
+            <p id="displayColor"></p>
+        </div>
+        <div class="form-group">
+            <button id="updateButton">Update Favorite Color</button>
+        </div>
+        <div class="form-group">
+            <button id="deleteButton">Delete Favorite Color</button>
+        </div>
+        <div class="form-group">
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="updateModal" class="modal">
+        <div class="modal-content">
+            <!--&times; is an HTML entity that represents the multiplication sign (×)-->
+            <span class="close">&times;</span>
+            <h2>Update Favorite Color</h2>
+            <input type="text" id="newFavoriteColor" placeholder="Enter new favorite color">
+            <button id="confirmUpdateButton">Update</button>
+        </div>
+    </div>
+
+    <script src="../LocalStorage/script.js"></script>
+</body>
+</html>
