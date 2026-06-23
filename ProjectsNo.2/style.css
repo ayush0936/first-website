@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body{
+    background:#f1f3f6;
+    line-height: 1.6;
+}
+/*Header*/
+header{
+    background-color: #131921;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+.logo{
+    font-size: 40px;
+    font-weight: bold;
+    color: blue;
+}
+.search-box{
+    display:flex;
+    align-items: center;
+}
+.search-box input{
+    width: 100%;
+    padding: 40px;
+    border: 1px solid orangered
+}
+.search-box button{
+    padding: 30px;
+    background-color: #febd69;
+    border: 1px solid orangered;
+    cursor: pointer;
+}
+.nav-links a{
+    color: goldenrod;
+    text-decoration: none;
+    margin-left: 20px;
+}
+/*.dark-mode {
+    background-color: #131921;
+    color:#febd69
+}*/
+/* Navbar */
+.nav-links{
+    display: flex;
+    align-items: center;
+}
+.navbar{
+    background: #232f3e;
+    padding: 12px 0;
+    text-align: center;
+}
+.navbar a{
+    color: green;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+/* main content */
+.main-content{
+    padding-top: 50px;
+    background:red;
+    background-size:auto;
+    height: 250px;
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+    text-shadow: 1px 1px 2px blue;
+}
+.main-content h1{
+    font-size: 46px;
+}
+.main-content p{
+    font-size: 18px;
+}
+
+/* Product Cards */
+.product-card{
+    background: white;
+    padding-bottom: 15px;
+    margin: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    text-align: center;
+}
+.product-card img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.product-card h3{
+    font-size: 24px;
+    margin: 10px 0;
+}
+.product-card p{
+    font-size: 20px;
+    color: green;
+    margin: 10px  0;
+}
+.product-card button{
+    background: blue;
+    color: white;
+    border: 1px solid red;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+.product-card button:hover{
+    background: darkblue;
+}
+.slider{
+    text-align: center;
+    margin-top: 20px;
+
+}
+.slider img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    overflow: hidden;
+}
+button{
+    padding: 10px ;
+    margin: 10px;
+}
+
+/* Footer */
+footer{
+    background: #131921;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}

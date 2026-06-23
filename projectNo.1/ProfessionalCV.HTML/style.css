@@ -1,3 +1,25 @@
+header{
+    background: orange;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 0 25px #662400;
+    overflow: hidden;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 10px 0;
+}
+nav a{
+    text-decoration: none;
+    font-size: 22px;
+}
+.cv{
+    margin-top: 20px;
+}
 *{
     margin:0;
     padding:0;

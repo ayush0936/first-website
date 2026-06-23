@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Amazon Clone</title>
+        <link rel="stylesheet" href="../ProjectsNo.2/style.css">
+    </head>
+    <body>
+        <!-- Header -->
+         <header class="header">
+            <div class="logo">Amazon </div>
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search Amazon">
+                <button onclick="searchProducts()">Search</button>
+               <!--<button onclick="toggleDarkMode()">Toggle Dark Mode</button>-->
+            </div>
+            <div class="nav-links">
+                <a href="#">Sign In</a>
+                <a href="#">Orders</a>
+                <a href="#">
+                    Cart (<span id="cartCount">0</span>)
+                </a>
+            </div>
+         </header>
+
+         <!-- Navigation -->
+         <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Electronics</a></li>
+                <li><a href="#">Fashion</a></li>
+                <li><a href="#">Mobiles</a></li>
+                <li><a href="#">Books</a></li>
+                <li><a href="#">More</a></li>
+            </ul>
+         </nav>
+
+         <!-- Main Content -->
+         <main class="main-content">
+            <h1>Welcome to Amazon</h1>
+            <p>Shop the latest products and deals.</p>
+            <p>Total Price: $<span id="totalPrice">0</span></p>
+         </main>
+
+         <!-- Product Section -->
+         <section class="product-section">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="headphone.jpg" alt="Product 1">
+                    <h3>Headphones</h3>
+                    <p>$999</p>
+                    <button onclick="addToCart(999)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="smartwatch.jpg" alt="Product 2">
+                    <h3>Smart Watch</h3>
+                    <p>$1499.00</p>
+                    <button onclick="addToCart(1499)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="smartphone.jpg" alt="Product 3">
+                    <h3>Smartphone</h3>
+                    <p>$15999.00</p>
+                    <button onclick="addToCart(15999)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="laptop.jpg" alt="Product 4">
+                    <h3>Laptop</h3>
+                    <p>$59999.00</p>
+                    <button onclick="addToCart(59999)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="shoes.jpg" alt="Product 5">
+                <h3>Shoes</h3>
+                <p>$1999.00</p>
+                <button onclick="addToCart(1999)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="t-shirt.jpg" alt="Product 6">
+                <h3>T-shirt</h3>
+                <p>$499.00</p>
+                <button onclick="addToCart(499)">Add to Cart</button>
+                </div>
+         </section>
+
+         <section class="slider">
+            <img id="sliderImage" src="phone2.jpg" alt="">
+            
+            <button onclick="prevSlide()">Previous</button>
+            <button onclick="nextSlide()">Next</button>
+            
+        </section>
+    
+         <!-- Footer -->
+         <footer class="footer">
+            <p>&copy; 2026 Amazon Clone | Created by Ayush Mishra.</p>
+         </footer>
+         
+         <script src="../ProjectsNo.2/script.js"></script>
+
+    </body>
+</html>
