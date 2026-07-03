@@ -43,16 +43,10 @@ body{
 }
 /* ============== LEFT=============== */
 .left{
-    width: 665%;
+    width: 65%;
     padding: 20px;
 }
-.right{
-    width: 35%;
-    background: #006666;
-    color:red;
-    padding: 35px;
-}
-.h1{
+h1{
     font-size: 50px;
     margin-bottom: 10px;
 }
@@ -60,7 +54,7 @@ body{
     font-size: 20px;
     color: green;
 }
-.h2{
+h2{
     margin-top:25px;
     margin-bottom: 10px;
     border-bottom: 2px solid #ddd;
