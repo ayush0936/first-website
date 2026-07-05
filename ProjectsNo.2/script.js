@@ -1,22 +1,23 @@
+console.log("script.js loaded");
 function searchProducts() {
 
-    let input = 
-    document.getElementById('search').value.toLowerCase();
+    let input = document.getElementById('search').value.toLowerCase();
 
-    let cards =
-     document.querySelectorAll('.product-card');
+    let cards = document.querySelectorAll('.product-card');
 
     cards.forEach(card => {
         let productName = card.querySelector('h3').textContent.toLowerCase();
 
         if (productName.includes(input)) {
-            card.style.display = ' ';
-        } else {
-            card.style.display = 'none';
+            card.style.display = 'block ';
+        } else  {
+           card.style.display = 'none';
         }
     });
 }
-document.getElementById('search').addEventListener("keypress", function(event) {
+document.getElementById("searchbtn").addEventListener("click", searchProducts);
+
+document.getElementById("searchbtn").addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
         searchProducts();
     }
@@ -26,6 +27,7 @@ let totalPrice = 0;
 function addToCart(Price){
     cartCount++;
     totalPrice += Price;
+    
     document.getElementById('cartCount').textContent = cartCount;
     document.getElementById('totalPrice').textContent = totalPrice;
 }
