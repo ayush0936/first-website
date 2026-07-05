@@ -1,14 +1,3 @@
-// Cart  Counter
-//let cartCount = 0;
-
-//function addToCart(price) {
-    //cartCount++;
-    
-    //document.getElementById('cartCount').textContent = cartCount;
-
-
-//Product Search 
-
 function searchProducts() {
 
     let input = 
@@ -32,12 +21,6 @@ document.getElementById('search').addEventListener("keypress", function(event) {
         searchProducts();
     }
 });
-
-// Dark Mode Toggle
-//function toggleDarkMode() {
-    //document.body.classList.toggle('dark-mode');
-
-//let totalPrice = 0;
 let cartCount = 0;
 let totalPrice = 0;
 function addToCart(Price){
