@@ -9,15 +9,14 @@ function searchProducts() {
         let productName = card.querySelector('h3').textContent.toLowerCase();
 
         if (productName.includes(input)) {
-            card.style.display = 'block ';
+            card.style.display = "block";
         } else  {
-           card.style.display = 'none';
+           card.style.display = "none";
         }
     });
 }
-document.getElementById("searchbtn").addEventListener("click", searchProducts);
 
-document.getElementById("searchbtn").addEventListener("keypress", function(event) {
+document.getElementById("search").addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
         searchProducts();
     }
