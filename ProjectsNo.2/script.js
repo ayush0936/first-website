@@ -1,4 +1,4 @@
-console.log("script.js loaded");
+
 function searchProducts() {
 
     let input = document.getElementById('search').value.toLowerCase();
