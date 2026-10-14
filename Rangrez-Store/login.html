@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pages.css">
+  <title>Login or Sign up – Rangrez</title>
+</head>
+
+<body>
+  <header class="header">
+    <a href="index.html" class="logo">rangrez</a>
+    <nav class="icons">
+      <a href="index.html">← Shop</a>
+      <a href="login.html" id="acct">👤 <span id="acctName">Login</span></a>
+      <a href="index.html#cart">🛍 <span>Cart</span><i id="cartCount">0</i></a>
+    </nav>
+  </header>
+  <main class="auth">
+    <section class="auth-art"
+      style="--bg:url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=70')">
+      <div>
+        <h2>Welcome to rangrez</h2>
+        <p>Login to track orders, save your wishlist and check out faster.</p>
+        <ul>
+          <li>Easy 7-day returns</li>
+          <li>Member-only offers</li>
+          <li>One-tap checkout</li>
+        </ul>
+      </div>
+    </section>
+    <section class="auth-card">
+      <div id="welcome" hidden>
+        <h1>Hi, <span id="wName"></span> 👋</h1>
+        <p class="muted" id="wMail" style="margin-bottom:22px"></p>
+        <h3 style="margin-bottom:6px">Recent orders</h3>
+        <div id="orders"></div>
+        <a class="btn full" href="index.html" style="margin-top:22px">Continue shopping</a>
+        <button class="btn ghost full" id="logout" style="margin-top:10px">Logout</button>
+      </div>
+      <div id="authBox">
+        <div class="tabs"><button class="tab on" data-t="login">Login</button><button class="tab" data-t="signup">Sign
+            up</button></div>
+
+        <form id="loginForm" novalidate>
+          <h1>Welcome back</h1>
+          <p class="muted" style="margin-bottom:20px">Login to your Rangrez account.</p>
+          <div class="field"><label for="lEmail">Email</label><input id="lEmail" type="email" autocomplete="email"
+              placeholder="you@example.com"><small class="err"></small></div>
+          <div class="field"><label for="lPass">Password</label>
+            <div class="pw"><input id="lPass" type="password" autocomplete="current-password"
+                placeholder="Your password"><button type="button" class="eye" data-eye="lPass">Show</button></div><small
+              class="err"></small>
+          </div>
+          <button class="btn full" type="submit">Login</button>
+          <p class="alt">New to Rangrez? <button type="button" data-go="signup">Create an account</button></p>
+        </form>
+
+        <form id="signupForm" hidden novalidate>
+          <h1>Create account</h1>
+          <p class="muted" style="margin-bottom:20px">It takes less than a minute.</p>
+          <div class="field"><label for="sName">Full name</label><input id="sName" autocomplete="name"
+              placeholder="Ayush Kumar"><small class="err"></small></div>
+          <div class="field"><label for="sEmail">Email</label><input id="sEmail" type="email" autocomplete="email"
+              placeholder="you@example.com"><small class="err"></small></div>
+          <div class="field"><label for="sPhone">Mobile number</label><input id="sPhone" type="tel" inputmode="numeric"
+              maxlength="10" placeholder="10-digit mobile number"><small class="err"></small></div>
+          <div class="field"><label for="sPass">Password</label>
+            <div class="pw"><input id="sPass" type="password" autocomplete="new-password"
+                placeholder="At least 6 characters"><button type="button" class="eye" data-eye="sPass">Show</button>
+            </div><small class="err"></small>
+          </div>
+          <div class="field"><label for="sPass2">Confirm password</label><input id="sPass2" type="password"
+              autocomplete="new-password" placeholder="Re-enter password"><small class="err"></small></div>
+          <div class="field"><label class="check"><input id="sTerms" type="checkbox"> I agree to the Terms of Use and
+              Privacy Policy</label><small class="err"></small></div>
+          <button class="btn full" type="submit">Create account</button>
+          <p class="alt">Already have an account? <button type="button" data-go="login">Login</button></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="data.js"></script>
+  <script src="login.js"></script>
+</body>
+
+</html>

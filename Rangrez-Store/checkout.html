@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pages.css">
+  <title>Checkout – Rangrez</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <a href="index.html" class="logo">rangrez</a>
+    <nav class="icons">
+      <a href="index.html">← Shop</a>
+      <a href="login.html" id="acct">👤 <span id="acctName">Login</span></a>
+      <a href="index.html#cart">🛍 <span>Cart</span><i id="cartCount">0</i></a>
+    </nav>
+  </header>
+  <main class="page">
+    <div id="empty" hidden>
+      <div class="panel center">
+        <h2 style="justify-content:center">Your cart is empty</h2>
+        <p class="muted" style="margin:10px 0 20px">Add something you like before checking out.</p><a class="btn"
+          href="index.html">Start shopping</a>
+      </div>
+    </div>
+
+    <div id="success" class="done" hidden>
+      <div class="tick">✓</div>
+      <h1>Order placed!</h1>
+      <p class="muted" id="okLine"></p>
+      <div class="panel" id="okBox"></div>
+      <a class="btn" href="index.html">Continue shopping</a>
+    </div>
+
+    <div id="checkout" hidden>
+      <h1 class="ptitle">Checkout</h1>
+      <div class="note" id="loginNote" hidden>Have an account? <a href="login.html?next=checkout.html">Login</a> for
+        faster checkout.</div>
+      <div class="co">
+        <form id="coForm" novalidate>
+          <section class="panel">
+            <h2><span class="step">1</span> Delivery address</h2>
+            <div class="grid2">
+              <div class="field"><label for="cName">Full name</label><input id="cName" autocomplete="name"><small
+                  class="err"></small></div>
+              <div class="field"><label for="cPhone">Mobile number</label><input id="cPhone" type="tel"
+                  inputmode="numeric" maxlength="10" autocomplete="tel"><small class="err"></small></div>
+              <div class="field full"><label for="cEmail">Email</label><input id="cEmail" type="email"
+                  autocomplete="email"><small class="err"></small></div>
+              <div class="field full"><label for="cAddr">Address (house no, street, area)</label><textarea id="cAddr"
+                  autocomplete="street-address"></textarea><small class="err"></small></div>
+              <div class="field"><label for="cPin">Pincode</label><input id="cPin" inputmode="numeric" maxlength="6"
+                  autocomplete="postal-code"><small class="err"></small></div>
+              <div class="field"><label for="cCity">City</label><input id="cCity" autocomplete="address-level2"><small
+                  class="err"></small></div>
+              <div class="field full"><label for="cState">State</label>
+                <select id="cState">
+                  <option value="">Select state</option>
+                  <option>Uttar Pradesh</option>
+                  <option>Delhi</option>
+                  <option>Haryana</option>
+                  <option>Maharashtra</option>
+                  <option>Karnataka</option>
+                  <option>Tamil Nadu</option>
+                  <option>Gujarat</option>
+                  <option>Rajasthan</option>
+                  <option>West Bengal</option>
+                  <option>Telangana</option>
+                  <option>Other</option>
+                </select><small class="err"></small>
+              </div>
+            </div>
+            <div class="types"><label><input type="radio" name="atype" checked> Home</label><label><input type="radio"
+                  name="atype"> Work</label></div>
+          </section>
+
+          <section class="panel">
+            <h2><span class="step">2</span> Payment method</h2>
+            <div class="pays">
+              <label class="pay"><input type="radio" name="pay" value="upi" checked><b>UPI</b><span>Google Pay, PhonePe,
+                  Paytm</span></label>
+              <label class="pay"><input type="radio" name="pay" value="card"><b>Credit / Debit card</b><span>Visa,
+                  Mastercard, RuPay</span></label>
+              <label class="pay"><input type="radio" name="pay" value="cod"><b>Cash on delivery</b><span>Pay when your
+                  order arrives</span></label>
+            </div>
+            <div id="p-upi">
+              <div class="field"><label for="uUpi">UPI ID</label><input id="uUpi" placeholder="name@bank"><small
+                  class="err"></small></div>
+            </div>
+            <div id="p-card" hidden>
+              <div class="field"><label for="kNum">Card number</label><input id="kNum" inputmode="numeric"
+                  maxlength="19" placeholder="1234 5678 9012 3456" autocomplete="cc-number"><small class="err"></small>
+              </div>
+              <div class="field"><label for="kName">Name on card</label><input id="kName" autocomplete="cc-name"><small
+                  class="err"></small></div>
+              <div class="grid2">
+                <div class="field"><label for="kExp">Expiry (MM/YY)</label><input id="kExp" inputmode="numeric"
+                    maxlength="5" placeholder="08/28" autocomplete="cc-exp"><small class="err"></small></div>
+                <div class="field"><label for="kCvv">CVV</label><input id="kCvv" type="password" inputmode="numeric"
+                    maxlength="3" autocomplete="cc-csc"><small class="err"></small></div>
+              </div>
+              <p class="muted">Demo only. Test card: 4111 1111 1111 1111. No real payment is made and card details are
+                never saved.</p>
+            </div>
+            <div id="p-cod" hidden>
+              <p class="muted">Keep the exact amount ready. You can pay in cash or UPI to the delivery partner.</p>
+            </div>
+          </section>
+        </form>
+
+        <aside class="panel summary">
+          <h2>Order summary</h2>
+          <div id="sumItems"></div>
+          <div class="coupon"><input id="coupon" placeholder="Coupon code"><button type="button"
+              id="applyBtn">Apply</button></div>
+          <div id="couponMsg" class="muted" style="margin-bottom:10px;min-height:1.2em"></div>
+          <div id="sumRows"></div>
+          <button class="btn full" type="submit" form="coForm" id="payBtn" style="margin-top:16px"></button>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <script src="data.js"></script>
+  <script src="checkout.js"></script>
+</body>
+
+</html>

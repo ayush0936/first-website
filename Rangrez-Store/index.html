@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rangrez – Fashion, Gadgets & Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="announce">Free delivery on orders above ₹1,999 &nbsp;|&nbsp; Use code <b>RANG10</b> for 10% off your first
+    order</div>
+
+  <header class="header">
+    <a href="#" class="logo">rangrez</a>
+    <form class="search" onsubmit="return false">
+      <input id="search" type="search" placeholder="Search for shoes, watches, headphones…" aria-label="Search">
+    </form>
+    <nav class="icons">
+      <a href="login.html" id="acct">👤<span id="acctName">Login</span></a>
+      <button id="wishBtn" aria-label="Wishlist">♡ <span>Wishlist</span><i id="wishCount">0</i></button>
+      <button id="cartBtn" aria-label="Cart">🛍 <span>Cart</span><i id="cartCount">0</i></button>
+    </nav>
+  </header>
+
+  <nav class="cats" id="catNav"></nav>
+
+  <section class="hero" id="hero">
+    <div class="slide"
+      style="--bg:url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1600&q=70')">
+      <div>
+        <h1>Festive season<br>style sale</h1>
+        <p>Up to 50% off on fashion and accessories.</p><button class="cta" data-cat="Fashion">Shop fashion</button>
+      </div>
+    </div>
+    <div class="slide"
+      style="--bg:url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1600&q=70')">
+      <div>
+        <h1>Sound that<br>moves with you</h1>
+        <p>Headphones, watches and more from top picks.</p><button class="cta" data-cat="Electronics">Shop
+          electronics</button>
+      </div>
+    </div>
+    <div class="slide"
+      style="--bg:url('https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1600&q=70')">
+      <div>
+        <h1>Make your<br>space yours</h1>
+        <p>Lamps, plants and desk essentials.</p><button class="cta" data-cat="Home">Shop home</button>
+      </div>
+    </div>
+    <div class="dots" id="dots"></div>
+  </section>
+
+  <section class="perks">
+    <div><b>Free delivery</b><span>On orders above ₹1,999</span></div>
+    <div><b>7-day returns</b><span>No questions asked</span></div>
+    <div><b>Secure payments</b><span>UPI, cards, COD</span></div>
+    <div><b>24×7 support</b><span>We are always here</span></div>
+  </section>
+
+  <main class="shop" id="shop">
+    <aside class="filters">
+      <h3>Filters</h3>
+      <label>Category
+        <select id="catSelect"></select>
+      </label>
+      <label>Max price: <b id="priceLabel">₹5,000</b>
+        <input id="price" type="range" min="500" max="5000" step="100" value="5000">
+      </label>
+      <label>Minimum rating
+        <select id="rating">
+          <option value="0">All ratings</option>
+          <option value="4">4★ & above</option>
+          <option value="4.5">4.5★ & above</option>
+        </select>
+      </label>
+      <button class="reset" id="reset">Clear filters</button>
+    </aside>
+
+    <div>
+      <div class="toolbar">
+        <h2 id="title">All products</h2>
+        <span id="found"></span>
+        <select id="sort" aria-label="Sort">
+          <option value="pop">Popularity</option>
+          <option value="low">Price: low to high</option>
+          <option value="high">Price: high to low</option>
+          <option value="disc">Biggest discount</option>
+        </select>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <h4>rangrez</h4>
+      <p>Everyday fashion, gadgets and home picks at honest prices.</p>
+    </div>
+    <div>
+      <h4>Help</h4>
+      <p>Track order<br>Returns<br>Contact us</p>
+    </div>
+    <div>
+      <h4>Stay in the loop</h4>
+      <form onsubmit="return false"><input placeholder="Your email"><button id="sub">Subscribe</button></form>
+    </div>
+  </footer>
+  <p class="copy">© 2026 Rangrez. BCA Minor Project – E-Commerce Website.</p>
+
+  <div class="shade" id="shade"></div>
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="d-head">
+      <h3 id="drawerTitle">Your cart</h3><button id="close" aria-label="Close">✕</button>
+    </div>
+    <div class="ship" id="ship"></div>
+    <div class="d-items" id="items"></div>
+    <div class="d-foot" id="foot">
+      <div class="line"><span>Subtotal</span><b id="total">₹0</b></div>
+      <button class="buy" id="checkout">Place order</button>
+    </div>
+  </aside>
+
+  <div class="modal" id="modal">
+    <div class="box" id="box"></div>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

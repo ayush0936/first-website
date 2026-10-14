@@ -1,0 +1,667 @@
+/* Login, Product aur Checkout pages ki extra styling (style.css ke saath use hoti hai) */
+
+/* ==========================================================================
+   Common Helpers
+   ========================================================================== */
+[hidden] {
+  display: none !important;
+}
+
+.page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 28px 5vw 70px;
+}
+
+.crumbs {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.crumbs a:hover {
+  color: var(--brand);
+}
+
+.panel {
+  background: #fff;
+  border-radius: var(--r);
+  padding: 24px;
+  margin-bottom: 18px;
+}
+
+.panel h2 {
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.center {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn {
+  display: inline-block;
+  background: var(--brand);
+  color: #fff;
+  padding: 14px 26px;
+  border-radius: 12px;
+  font-weight: 800;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: var(--brand-d);
+}
+
+.btn.ghost {
+  background: #fff;
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+}
+
+.btn.ghost:hover {
+  background: var(--bg);
+}
+
+.btn.full {
+  width: 100%;
+}
+
+/* ==========================================================================
+   Form Fields
+   ========================================================================== */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.field label {
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.field input,
+.field select,
+.field textarea {
+  padding: 12px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  width: 100%;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 84px;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--brand);
+  outline: 0;
+  box-shadow: 0 0 0 3px #0b6e4f22;
+}
+
+.field.bad input,
+.field.bad select,
+.field.bad textarea {
+  border-color: var(--sale);
+}
+
+.err {
+  color: var(--sale);
+  font-size: 0.78rem;
+}
+
+.pw {
+  position: relative;
+}
+
+.pw input {
+  padding-right: 64px;
+}
+
+.eye {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--brand);
+  padding: 6px;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 16px;
+}
+
+.grid2 .full {
+  grid-column: 1 / -1;
+}
+
+/* ==========================================================================
+   Login / Signup Page
+   ========================================================================== */
+.auth {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 80vh;
+}
+
+.auth-art {
+  display: flex;
+  align-items: flex-end;
+  padding: 48px;
+  color: #fff;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.7)),
+    var(--bg) center / cover,
+    #164;
+}
+
+.auth-art h2 {
+  font-size: 2.4rem;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.auth-art li {
+  margin: 6px 0 0 18px;
+}
+
+.auth-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 5vw;
+  background: #fff;
+}
+
+.auth-card>div {
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-card h1 {
+  font-size: 1.6rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--bg);
+  border-radius: 12px;
+  padding: 4px;
+  margin-bottom: 24px;
+}
+
+.tab {
+  padding: 11px;
+  border-radius: 9px;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.tab.on {
+  background: #fff;
+  color: var(--ink);
+  box-shadow: 0 1px 6px #0002;
+}
+
+.check {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  font-size: 0.85rem;
+  margin-bottom: 14px;
+}
+
+.check input {
+  accent-color: var(--brand);
+  margin-top: 3px;
+}
+
+.alt {
+  text-align: center;
+  font-size: 0.88rem;
+  margin-top: 16px;
+  color: var(--muted);
+}
+
+.alt button {
+  color: var(--brand);
+  font-weight: 700;
+}
+
+.order {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   Product Detail Page
+   ========================================================================== */
+.pd {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.zoom {
+  border-radius: var(--r);
+  overflow: hidden;
+  background: linear-gradient(135deg, #dfe7e3, #eef1ee);
+  aspect-ratio: 1 / 1;
+  cursor: zoom-in;
+  position: sticky;
+  top: 90px;
+}
+
+.zoom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s;
+}
+
+.pd h1 {
+  font-size: 2rem;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin: 4px 0 10px;
+}
+
+.pd .pr b {
+  font-size: 2rem;
+}
+
+.save {
+  color: var(--brand);
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin: 2px 0 8px;
+}
+
+.opt {
+  margin: 18px 0;
+}
+
+.opt>b {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.sizes {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.sizes button {
+  min-width: 56px;
+  padding: 10px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  font-weight: 700;
+  background: #fff;
+}
+
+.sizes button.on {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: #fff;
+}
+
+.btns {
+  display: flex;
+  gap: 12px;
+  margin: 22px 0 12px;
+}
+
+.btns>* {
+  flex: 1;
+}
+
+.pin {
+  display: flex;
+  gap: 8px;
+}
+
+.pin input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.pin button {
+  padding: 0 20px;
+  border-radius: 10px;
+  border: 1.5px solid var(--brand);
+  color: var(--brand);
+  font-weight: 700;
+}
+
+#pinMsg {
+  font-size: 0.85rem;
+  margin-top: 8px;
+}
+
+.ok {
+  color: var(--brand);
+}
+
+.no {
+  color: var(--sale);
+}
+
+.hl {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  margin: 18px 0;
+  font-size: 0.92rem;
+}
+
+.hl li::before {
+  content: "✓";
+  color: var(--brand);
+  font-weight: 800;
+  margin-right: 8px;
+}
+
+.tabs2 {
+  display: flex;
+  gap: 6px;
+  border-bottom: 1px solid var(--line);
+  margin: 44px 0 20px;
+}
+
+.tabs2 button {
+  padding: 12px 18px;
+  font-weight: 700;
+  color: var(--muted);
+  border-bottom: 3px solid transparent;
+}
+
+.tabs2 button.on {
+  color: var(--brand);
+  border-color: var(--brand);
+}
+
+.spec {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: var(--r);
+  overflow: hidden;
+}
+
+.spec td {
+  padding: 13px 18px;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.92rem;
+}
+
+.spec td:first-child {
+  color: var(--muted);
+  width: 35%;
+}
+
+.rev {
+  background: #fff;
+  border-radius: var(--r);
+  padding: 18px;
+  margin-bottom: 12px;
+}
+
+.rev p {
+  margin-top: 6px;
+  font-size: 0.92rem;
+}
+
+h2.sec {
+  font-size: 1.4rem;
+  margin: 44px 0 18px;
+}
+
+.rel {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 18px;
+}
+
+/* ==========================================================================
+   Checkout Page
+   ========================================================================== */
+.ptitle {
+  font-size: 1.8rem;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+}
+
+.co {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.step {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--brand);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 0.85rem;
+}
+
+.types {
+  display: flex;
+  gap: 10px;
+}
+
+.types label {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding: 10px 16px;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.types input {
+  accent-color: var(--brand);
+}
+
+.pays {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.pay {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2px 12px;
+  padding: 14px 16px;
+  border: 1.5px solid var(--line);
+  border-radius: 12px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.pay input {
+  grid-row: span 2;
+  accent-color: var(--brand);
+}
+
+.pay span {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.pay:has(input:checked) {
+  border-color: var(--brand);
+  background: #eef6f2;
+}
+
+.summary {
+  position: sticky;
+  top: 90px;
+}
+
+.sitem {
+  display: grid;
+  grid-template-columns: 54px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 0.88rem;
+}
+
+.sitem img {
+  width: 54px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #e7ece9;
+}
+
+.coupon {
+  display: flex;
+  gap: 8px;
+  margin: 14px 0 4px;
+}
+
+.coupon input {
+  flex: 1;
+  padding: 11px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  text-transform: uppercase;
+  background: #fff;
+}
+
+.coupon button {
+  padding: 0 18px;
+  border-radius: 10px;
+  background: var(--ink);
+  color: #fff;
+  font-weight: 700;
+}
+
+.srow {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 0.92rem;
+}
+
+.srow.t {
+  font-size: 1.2rem;
+  font-weight: 800;
+  border-top: 1px solid var(--line);
+  margin-top: 8px;
+  padding-top: 14px;
+}
+
+.note {
+  background: #eef6f2;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 0.88rem;
+  margin-bottom: 18px;
+}
+
+.note a {
+  color: var(--brand);
+  font-weight: 700;
+}
+
+.done {
+  text-align: center;
+  max-width: 560px;
+  margin: 30px auto;
+}
+
+.tick {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: var(--brand);
+  color: #fff;
+  font-size: 2.4rem;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 18px;
+}
+
+.done h1 {
+  font-size: 1.9rem;
+  letter-spacing: -0.03em;
+}
+
+.done .panel {
+  text-align: left;
+  margin: 22px 0;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 900px) {
+
+  .auth,
+  .pd,
+  .co {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-art {
+    min-height: 200px;
+    padding: 28px;
+  }
+
+  .zoom,
+  .summary {
+    position: static;
+  }
+
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+}
